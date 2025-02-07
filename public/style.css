@@ -1,0 +1,32 @@
+*{
+    margin: 0;
+}
+
+header{
+    display: flex;
+    justify-content: center;
+    height: 60px;
+    width: auto;
+    background-color: #FD7A9B;
+}
+
+#logo{
+    display: flex;
+    position: absolute;
+    gap: 2px;
+    justify-content: center;
+    margin: 10px;
+    cursor: pointer;
+}
+
+#logo img{
+    height: 38px;
+    width: 32px;
+}
+
+#logo p{
+    font-size: 24px;
+    margin: 6px 0px 0px 0px;
+    color: aliceblue;
+    font-family: Inter, sans-serif;
+}
