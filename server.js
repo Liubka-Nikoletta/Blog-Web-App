@@ -1,5 +1,4 @@
 import express from "express";
-import url from "url";
 
 const app = express();
 const port = 3000;
