@@ -11,24 +11,53 @@
                 👉🏻 Read and comment on fascinating content</h3>
         </div>
         <div class="buttons">
-            <button id="signUpBtn" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Sign up</button>
-            <button id="logInBtn">Log in</button>
+            <button id="signUpBtn" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#signUpModal">Sign up</button>
+            <button id="logInBtn" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#logInModal">Log in</button>
         </div>
     </div>
     <img src="/image/work-img.png" alt="work image" id="mainImg">
-    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal fade" id="signUpModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticSignUpModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Modal title</h1>
+                    <h2 class="modal-title fs-5" id="staticSignUpModalLabel">Sign up</h2>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    ...
+                    <form action="/signUp">
+                        <label for="signUpEmail">Email:</label>
+                        <input type="email" name="sign-up-email" id="signUpEmail" class="form-input">
+                        <label for="signUpName">Name:</label>
+                        <input type="text" name="sign-up-user-name" id="signUpName" class="form-input">
+                        <label for="signUpPassword">Password:</label>
+                        <input type="password" name="sign-up-password" id="signUpPassword" class="form-input">
+                    </form>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Understood</button>
+                    <button type="button" class="btn btn-primary">Sign up</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="logInModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticLogInModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title fs-5" id="staticLogInModalLabel">Log in</h2>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form action="/logIn">
+                        <label for="logInName">Name:</label>
+                        <input type="text" name="log-in-user-name" id="logInName" class="form-input">
+                        <label for="logInPassword">Password:</label>
+                        <input type="password" name="log-in-password" id="logInPassword" class="form-input">
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Log in</button>
                 </div>
             </div>
         </div>

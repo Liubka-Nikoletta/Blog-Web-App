@@ -108,8 +108,35 @@ h3{
     height: 500px;
 }
 
+.btn-primary{
+    background-color: #BEBC22;
+    border-color: #BEBC22;
+}
+
+.btn-primary:hover{
+    background-color: #a5a30a;
+    border-color: #a5a30a;
+}
+
+.modal-header{
+    background-color: #BEBC22;
+}
+
+.modal-title{
+    color: white;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    color: #807e0b;
+}
+
+.form-input{
+    border: 2px #BEBC22 solid;
+}
+
 @media (max-width: 1350px) {
-    /* Зменшуємо розмір тексту */
     h1 {
         font-size: 50px;
     }
@@ -126,7 +153,6 @@ h3{
         gap: 2%;
     }
 
-    /* Зменшуємо розмір зображення */
     #mainImg {
         width: 450px;
         height: 400px;
