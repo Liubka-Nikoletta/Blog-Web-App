@@ -62,6 +62,19 @@ app.post("/createPost", (req, res) => {
     res.render("home.ejs", {name: currentUserName, posts: posts});
 })
 
+app.post("/editPost", (req, res) => {
+    const {"title": postTitle,"content": content} = req.body;
+    const postIndex = posts.findIndex(p => p.title === postTitle);
+
+    if (postIndex !== -1) {
+        posts[postIndex].content = content;
+        res.render("home.ejs", { name: currentUserName, posts: posts });
+    } else {
+        res.status(404).send("Post not found!");
+    }
+
+})
+
 app.listen(port, ()=>{
     console.log("Server started on port " + port);
 })

@@ -131,7 +131,7 @@ body{
     gap: 10px;
 }
 
-.icons a img{
+.icons .icon{
     width: 25px;
     height: 25px;
 }
@@ -220,12 +220,33 @@ h4{
     color: #807e0b;
 }
 
+.btn-edit-post {
+    all: unset;
+}
+
+.btn-edit-post:focus,
+.btn-edit-post:active {
+    outline: none;
+    background: none;
+    box-shadow: none;
+}
+
+.icons a{
+    padding: 5px;
+}
+
+.btn-edit-post:hover{
+    all:unset;
+    cursor: pointer;
+}
+
 .create-modal{
     width: 600px;
 }
 
 textarea{
-    border: 2px #BEBC22 solid;;
+    border: 2px #BEBC22 solid;
+    height: 400px;
 }
 
 .form-input{

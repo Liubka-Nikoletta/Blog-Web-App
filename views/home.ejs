@@ -5,17 +5,22 @@
     <% posts.forEach(post => {%>
         <div class="col">
             <div class="card">
-                <img src="<%= post.image ? post.image : '/image/work-img.png' %>" class="card-img-top" alt="post's photo">
+                <img src="/image/work-img.png" class="card-img-top" alt="post's photo">
                 <div class="card-body">
                     <h5 class="card-title"><%=post.title %></h5>
                     <p class="card-text"><%=post.content %></p>
                     <p>Author: <%=post.author %></p>
                     <div class="post-buttons">
                         <a href="/viewPost?title=<%=post.title %>" class="btn btn-primary">View</a>
+                        <%if(name === post.author){%>
                         <div class="icons">
-                            <a href="#"><img src="/image/pencil.svg" alt="Edit post"></a>
-                            <a href="#"><img src="/image/trash.svg" alt="Delete post"></a>
+                            <button type="button" class="btn btn-primary btn-edit-post" data-bs-toggle="modal"
+                                   data-bs-target="#editPost"  data-title="<%= post.title %>"
+                                    data-content="<%= post.content %>">
+                                <img src="/image/pencil.svg" alt="Edit post" class="icon"></button>
+                            <a href="#"><img src="/image/trash.svg" alt="Delete post" class="icon"></a>
                         </div>
+                        <%}%>
                     </div>
                 </div>
             </div>
@@ -47,6 +52,29 @@
         </form>
     </div>
 </div>
+<div class="modal fade" id="editPost" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticEditPostModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <form action="/editPost" method="POST">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title fs-5" id="staticEditPostModalLabel">Edit post</h2>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body create-modal">
+                    <label for="editTitle">Title:</label>
+                    <input type="text" name="title" id="editTitle" class="form-edit-title" placeholder="Enter title" required readonly>
+                    <label for="editContent">Content:</label>
+                    <textarea name="content" id="editContent" class="form-edit-content" placeholder="Enter your content" required></textarea>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-primary">Edit</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+<script src="/script.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
