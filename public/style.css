@@ -6,7 +6,7 @@ body{
     background-color: #FFEFEF;
 }
 
-header{
+.main-page{
     display: flex;
     justify-content: center;
     height: 60px;
@@ -14,9 +14,17 @@ header{
     background-color: #FD7A9B;
 }
 
+.home-page{
+    display: flex;
+    justify-content: space-between;
+    height: 60px;
+    width: auto;
+    background-color: #FD7A9B;
+}
+
 #logo{
     display: flex;
-    position: absolute;
+    position: relative;
     gap: 2px;
     justify-content: center;
     margin: 10px;
@@ -32,6 +40,13 @@ header{
     font-size: 24px;
     margin: 6px 0px 0px 0px;
     color: aliceblue;
+    font-family: Inter, sans-serif;
+}
+
+.user-name{
+    margin: 15px 15px 10px 0px;
+    font-size: 20px;
+    color: white;
     font-family: Inter, sans-serif;
 }
 
@@ -126,8 +141,9 @@ h3{
     color: white;
 }
 
-form{
+.modal-body{
     display: flex;
+    width: 400px;
     flex-direction: column;
     color: #807e0b;
 }

@@ -12,8 +12,21 @@
 </head>
 <body>
 <header>
-    <div id="logo">
-        <img src="/image/bootstrap.svg" alt="logo" id="logoImg">
-        <p>log</p>
+    <% if (name) { %>
+    <div class="home-page">
+        <div id="logo">
+            <img src="/image/bootstrap.svg" alt="logo" id="logoImg">
+            <p>log</p>
+        </div>
+        <p class="user-name"><%= name %></p>
     </div>
+    <% }else{ %>
+        <div class="main-page">
+            <div id="logo">
+                <img src="/image/bootstrap.svg" alt="logo" id="logoImg">
+                <p>log</p>
+            </div>
+        </div>
+    <% } %>
 </header>
+
