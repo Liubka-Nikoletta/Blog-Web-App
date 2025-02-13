@@ -8,18 +8,22 @@ body{
 
 .main-page{
     display: flex;
+    position: fixed;
     justify-content: center;
     height: 60px;
-    width: auto;
+    width: 100%;
     background-color: #FD7A9B;
+    z-index: 5;
 }
 
 .home-page{
+    position: fixed;
     display: flex;
     justify-content: space-between;
     height: 60px;
-    width: auto;
+    width: 100%;
     background-color: #FD7A9B;
+    z-index: 5;
 }
 
 #logo{
@@ -38,9 +42,20 @@ body{
 
 #logo p{
     font-size: 24px;
-    margin: 6px 0px 0px 0px;
+    margin: 0px;
     color: aliceblue;
     font-family: Inter, sans-serif;
+}
+
+#createNewPost{
+    border: none;
+    padding-left: 10px;
+    background-color: #FD7A9B;
+    color: white;
+}
+
+#createNewPost:hover{
+    color: #9e1b39;
 }
 
 .user-name{
@@ -148,8 +163,26 @@ h3{
     color: #807e0b;
 }
 
+.create-modal{
+    width: 600px;
+}
+
+h4{
+    display: flex;
+    justify-content: center;
+    font-family: 'Pacifico', sans-serif;
+}
+
+textarea{
+    border: 2px #BEBC22 solid;;
+}
+
 .form-input{
     border: 2px #BEBC22 solid;
+}
+
+.cards{
+    padding: 80px 50px 0px 50px;
 }
 
 @media (max-width: 1350px) {
