@@ -5,11 +5,18 @@
     <% posts.forEach(post => {%>
         <div class="col">
             <div class="card">
-                <img src="/image/work-img.png" class="card-img-top" alt="post's photo">
+                <img src="<%= post.image ? post.image : '/image/work-img.png' %>" class="card-img-top" alt="post's photo">
                 <div class="card-body">
                     <h5 class="card-title"><%=post.title %></h5>
                     <p class="card-text"><%=post.content %></p>
                     <p>Author: <%=post.author %></p>
+                    <div class="post-buttons">
+                        <a href="/viewPost?title=<%=post.title %>" class="btn btn-primary">View</a>
+                        <div class="icons">
+                            <a href="#"><img src="/image/pencil.svg" alt="Edit post"></a>
+                            <a href="#"><img src="/image/trash.svg" alt="Delete post"></a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

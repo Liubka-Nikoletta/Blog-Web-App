@@ -16,11 +16,14 @@
     <div class="home-page">
         <div id="logo">
             <img src="/image/bootstrap.svg" alt="logo" id="logoImg">
-            <p>log</p>
+            <a href="/home">log</a>
             <button type="button" id="createNewPost" class="btn btn-primary" data-bs-toggle="modal"
                     data-bs-target="#createPost">Create new post</button>
         </div>
-        <p class="user-name"><%= name %></p>
+        <div class="header-el">
+            <p class="user-name"><%= name %></p>
+            <a href="/"><img src="/image/exit.svg" alt="Exit icon"></a>
+        </div>
     </div>
     <% }else{ %>
         <div class="main-page">

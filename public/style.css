@@ -40,11 +40,32 @@ body{
     width: 32px;
 }
 
+#logo a{
+    font-size: 24px;
+    margin: 0px;
+    color: aliceblue;
+    font-family: Inter, sans-serif;
+    text-decoration: none;
+}
+
 #logo p{
     font-size: 24px;
     margin: 0px;
     color: aliceblue;
     font-family: Inter, sans-serif;
+    text-decoration: none;
+}
+
+.header-el{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.header-el a img{
+    width: 20px;
+    height: 20px;
 }
 
 #createNewPost{
@@ -68,7 +89,7 @@ body{
 .main-page-el{
     display: flex;
     justify-content: center;
-    padding-top: 5%;
+    padding-top: 10%;
     gap: 5%;
 }
 
@@ -79,6 +100,18 @@ body{
     gap: 40px;
 }
 
+.card-text {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-height: 4.5em;
+    min-height: 3em;
+    line-height: 1.5em;
+    white-space: normal;
+}
+
 .text-content{
     display: block;
     width: 700px;
@@ -86,6 +119,21 @@ body{
 
 .text-content span{
     color: #BEBC22;
+}
+.post-buttons{
+    display: flex;
+    justify-content: space-between;
+}
+
+.icons{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.icons a img{
+    width: 25px;
+    height: 25px;
 }
 
 h1{
@@ -96,6 +144,14 @@ h1{
 }
 
 h3{
+    font-family: Inter, sans-serif;
+    color: #FD7A9B;
+}
+
+h4{
+    padding: 30px;
+    display: flex;
+    justify-content: center;
     font-family: Inter, sans-serif;
     color: #FD7A9B;
 }
@@ -159,18 +215,13 @@ h3{
 .modal-body{
     display: flex;
     width: 400px;
+    gap: 10px;
     flex-direction: column;
     color: #807e0b;
 }
 
 .create-modal{
     width: 600px;
-}
-
-h4{
-    display: flex;
-    justify-content: center;
-    font-family: 'Pacifico', sans-serif;
 }
 
 textarea{
@@ -181,8 +232,19 @@ textarea{
     border: 2px #BEBC22 solid;
 }
 
+.select-img{
+    border: none;
+}
+
 .cards{
     padding: 80px 50px 0px 50px;
+}
+
+.view-post-el{
+    display: flex;
+    justify-content: center;
+    padding-top: 10%;
+    gap: 5%;
 }
 
 @media (max-width: 1350px) {

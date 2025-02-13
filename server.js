@@ -6,11 +6,22 @@ const users = [];
 let currentUserName = '';
 const posts = [];
 
-app.use(express.static("public"));
 app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
+app.use(express.static("public"));
 
 app.get("/", (req, res) => {
     res.render("index.ejs", {name: null});
+})
+
+app.get("/home", (req, res) => {
+    res.render("home.ejs", {name: currentUserName, posts: posts});
+})
+
+app.get("/viewPost", (req, res) => {
+    const postTitle = req.query.title;
+    const post = posts.find(post => post.title === postTitle);
+    res.render("viewPost.ejs", {name: currentUserName, post: post});
 })
 
 app.post("/logIn", (req, res) => {
@@ -20,7 +31,7 @@ app.post("/logIn", (req, res) => {
 
     if(user){
         currentUserName = user.name;
-        res.render("home.ejs", {name: user.name, title: null, content: null, posts: posts});
+        res.render("home.ejs", {name: user.name, posts: posts});
     }
     else{
         res.status(401).send("User not found!");
@@ -39,7 +50,7 @@ app.post("/signUp", (req, res) => {
     else{
         users.push(newUser);
         currentUserName = newUser.name;
-        res.render("home.ejs", {name: newUser.name, title: null, content: null, posts: posts});
+        res.render("home.ejs", {name: newUser.name, posts: posts});
     }
 })
 
