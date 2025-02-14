@@ -4,7 +4,7 @@ const app = express();
 const port = 3000;
 const users = [];
 let currentUserName = '';
-const posts = [];
+let posts = [];
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
@@ -73,6 +73,12 @@ app.post("/editPost", (req, res) => {
         res.status(404).send("Post not found!");
     }
 
+})
+
+app.post("/deletePost", (req, res) => {
+    const title = req.query.title;
+    posts = posts.filter(post => post.title !== title);
+    res.render("home.ejs", {name: currentUserName, posts: posts});
 })
 
 app.listen(port, ()=>{

@@ -231,11 +231,23 @@ h4{
     box-shadow: none;
 }
 
-.icons a{
-    padding: 5px;
+.btn-edit-post:hover{
+    all:unset;
+    cursor: pointer;
 }
 
-.btn-edit-post:hover{
+.btn-confirm-delete-post {
+    all: unset;
+}
+
+.btn-confirm-delete-post:focus,
+.btn-confirm-delete-post:active {
+    outline: none;
+    background: none;
+    box-shadow: none;
+}
+
+.btn-confirm-delete-post:hover{
     all:unset;
     cursor: pointer;
 }

@@ -7,3 +7,16 @@ document.querySelectorAll('.btn-edit-post').forEach(button => {
         document.getElementById('editContent').value = content;
     });
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+    const deletePostModal = document.getElementById("deletePost");
+    const deletePostForm = document.getElementById("deletePostForm");
+
+    deletePostModal.addEventListener("show.bs.modal", (event) => {
+        const button = event.relatedTarget;
+        const postTitle = button.getAttribute("data-title-delete");
+
+        deletePostForm.action = `/deletePost?title=${encodeURIComponent(postTitle)}`;
+    });
+});
+

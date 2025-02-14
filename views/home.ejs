@@ -5,7 +5,7 @@
     <% posts.forEach(post => {%>
         <div class="col">
             <div class="card">
-                <img src="/image/work-img.png" class="card-img-top" alt="post's photo">
+                <img src="/image/cat.jpg" class="card-img-top" alt="post's photo">
                 <div class="card-body">
                     <h5 class="card-title"><%=post.title %></h5>
                     <p class="card-text"><%=post.content %></p>
@@ -18,7 +18,9 @@
                                    data-bs-target="#editPost"  data-title="<%= post.title %>"
                                     data-content="<%= post.content %>">
                                 <img src="/image/pencil.svg" alt="Edit post" class="icon"></button>
-                            <a href="#"><img src="/image/trash.svg" alt="Delete post" class="icon"></a>
+                            <button type="button" class="btn btn-primary btn-confirm-delete-post" data-bs-toggle="modal"
+                                    data-bs-target="#deletePost" data-title-delete="<%= post.title %>">
+                                <img src="/image/trash.svg" alt="Delete post" class="icon"></button>
                         </div>
                         <%}%>
                     </div>
@@ -69,6 +71,25 @@
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                     <button type="submit" class="btn btn-primary">Edit</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+<div class="modal fade" id="deletePost" tabindex="-1" aria-labelledby="deletePostModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <form id="deletePostForm" method="POST">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title fs-5" id="deletePostModalLabel">Delete post</h2>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    Are you sure you want to delete this post?
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-primary">Confirm</button>
                 </div>
             </div>
         </form>
