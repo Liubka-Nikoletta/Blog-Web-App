@@ -38,22 +38,22 @@ After installing the project, start the application with the following command:
 
 The application will be available at http://localhost:3000.
 
-![User authentication](\public\image\userAuthentication.png)
+![User authentication](public/image/userAuthentication.png)
 
 To create or manage blogs, users need to register and log in.
 Once logged in, they can access the blog management features.
 You can create multiple accounts and switch between them.
-![Home page](\public\image\home.png)
+![Home page](public/image/home.png)
 
 Creating posts: After logging in, users can create records by clicking the ‘Create new post’ button.
-![Home page](\public\image\create.png)
+![Home page](public/image/create.png)
 
 Editing records: Users can only change the content of their own records by clicking the ‘Edit’ button.
-![Edit post](\public\image\edit.png)
+![Edit post](public/image/edit.png)
 
 Viewing records: Users can view all records, including those of other users, by clicking the ‘View’ button.
-![View page](\public\image\view.png)
+![View page](public/image/view.png)
 
 Deleting records: Users can delete only their own records by clicking the ‘Delete’ button.
-![Delete post](\public\image\delete.png)
+![Delete post](public/image/delete.png)
 
